@@ -32,5 +32,9 @@
     "type": "git",
     "url": "git+https://github.com/cwooldridge/node-red-contrib-mytimeout.git"
   },
-  "homepage": "https://github.com/cwooldridge/node-red-contrib-mytimeout#readme"
+  "homepage": "https://github.com/cwooldridge/node-red-contrib-mytimeout#readme",
+  "dependencies": {
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.3.2"
+  }
 }

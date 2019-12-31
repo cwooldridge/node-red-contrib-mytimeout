@@ -46,13 +46,13 @@
   </div>
   
   <div class="form-row">
-    <label for="node-input-ratelimit"><i class="fa fa-clock-o"></i> Rate Limit (secs)</label>
-    <input style="width:15%" type="text" id="node-input-ratelimit" placeholder="1">
+    <label for="node-input-rateLimit"><i class="fa fa-clock-o"></i> Rate Limit (secs)</label>
+    <input style="width:15%" type="text" id="node-input-rateLimit" placeholder="1">
   </div>
   
   <div class="form-row">
-    <label for="node-input-durationEval"><i class="fa fa-clock-o"></i> Duration Eval </label>
-    <input style="width:15%" type="text" id="node-input-durationEval" placeholder="1">
+    <label for="node-input-durationEval"><i class="fa fa-tag"></i> Duration Eval </label>
+    <input style="width:15%" type="text" id="node-input-durationEval" placeholder="duration.format('ss')">
   </div>
 
   <div class="form-row">
@@ -160,8 +160,8 @@ or
 </script>
 
 <script type="text/javascript">
-    RED.nodes.registerType('mytimeout',{
-        category: 'cherry',
+    RED.nodes.registerType('countdownage',{
+        category: 'wooldridge',
         color:"#ff66cc",
         inputLabels: "Any old input resets the timer",
         outputLabels: "Output message depends on state",
@@ -179,14 +179,14 @@ or
                 ignoreCase: { value: false },
                 repeat:     { value: false },
                 again:      { value: false },
-		durationEval: {value: "duration.format('ss')"},
-		rateLimit: {value: 1 }
+		            durationEval: {value: "duration.format('ss')"},
+		            rateLimit: {value: 1 }
         },
         inputs:  1,
         outputs: 2,
         icon: "stopwatch.png",
         label: function() {
-            return this.name||"mytimeout";
+            return this.name||"countdownage";
         },
         labelStyle: function() {
             return this.name?"node_label_italic":"";

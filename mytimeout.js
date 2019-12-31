@@ -304,7 +304,7 @@ module.exports = function(RED) {
 
         function formatTicks(t)
         {
-           var duration = moment().duration(t, 'seconds');
+           var duration = moment.duration(t, 'seconds');
            var evalOut = eval(node.durationEval);
             return evalOut;
         }
